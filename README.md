@@ -5,7 +5,7 @@ Those days when he writes that code, browsers allow web pages to upload training
 But new browsers do not allow web pages to directly upload data from local computers. 
 For that to work I write a small  server based on node.js to handle the file upload in a way that it works as expected. 
 
-***How to use this program***
+#How to use this program
 You are supposed to have node.js installed before running this program.
 Also you need to have a webcam attached to the computer.
 
