@@ -1,9 +1,10 @@
-# IMPORTANT: Bug Fixes
+This is a direct fork from Face-Detection-JavaScript which is written by Kyle. 
 
-## `navigator.getUserMedia`
+When he wrote the original code, browsers let web application to upload contents directly from local files.
 
-`navigator.getUserMedia` is now deprecated and is replaced by `navigator.mediaDevices.getUserMedia`. To fix this bug replace all versions of `navigator.getUserMedia` with `navigator.mediaDevices.getUserMedia`
+But it seems that now it is not allowd. 
 
-## Low-end Devices Bug
+For that I write a small project based on node.js (version 14) to act as a local server to upload necessary contents from localhost rather that local file system.
+In this way it starts working as expected.
 
-The video eventListener for `play` fires up too early on low-end machines, before the video is fully loaded, which causes errors to pop up from the Face API and terminates the script (tested on Debian [Firefox] and Windows [Chrome, Firefox]). Replaced by `playing` event, which fires up when the media has enough data to start playing.
+
