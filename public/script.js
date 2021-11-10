@@ -9,17 +9,14 @@ Promise.all([
 ]).then(startVideo)
 
 
-//startVideo();
-
 function startVideo() {
-  navigator.getUserMedia(
-    { video: {} },
-    stream => video.srcObject = stream,
-    err => console.error(err)
-  )
+	navigator.mediaDevices.getUserMedia({
+		video:true,
+		audio:false
+		}).then(stream =>{video.srcObject = stream });
 }
 
-video.addEventListener('play', () => {
+video.addEventListener('playing', () => {
   const canvas = faceapi.createCanvasFromMedia(video)
   document.body.append(canvas)
   const displaySize = { width: video.width, height: video.height }
